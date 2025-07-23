@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Personal Blog</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #b8ebe3;
+      color: #333;
+    }
+    header {
+      background: #222;
+      color: #fff;
+      padding: 1em;
+      text-align: center;
+    }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    nav li {
+      margin: 0 1em;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+    }
+    main {
+      padding: 1em;
+    }
+    .post {
+      margin-bottom: 2em;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-top: 1em;
+    }
+    button {
+      margin-top: 1em;
+      padding: 0.5em 1em;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 1em;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+    @media(max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+      }
+    }
+    .dark-theme {
+      background: #121212;
+      color: #eee;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Personal Blog</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="https://education.nationalgeographic.org/resource/ecosystem/">Articles</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="post">
+      <h2>Curious By Nature</h2>
+      <img src="C:\Users\prade\OneDrive\Pictures\nature.jpeg" loading="lazy" alt="Post Image" />
+      <p>Nature, in all its splendor, holds an undeniable magic.From the vibrant colors of blooming flowers to the majestic presence of a lion,<br> the natural world offers a constant source of wonder and awe. Animals, with their diverse behaviors and adaptations, showcase the wonders of evolution,<br> while the interconnectedness of ecosystems reveals the delicate balance of life.<br> Observing nature and its creatures allows us to appreciate the profound magic and interconnectedness that sustains our planet. </p>
+      <button onclick="toggleTheme()">Toggle Theme</button>
+    </section>
+
+    <section class="post">
+      <h2>Minimal Living in a Maximum World</h2>
+      <img src="C:\Users\prade\OneDrive\Pictures\life.png" loading="lazy" alt="Post Image" />
+      <p>"Minimal Living in a Maximum World" is about intentionally simplifying our life by reducing clutter, distractions, and consumption, focusing on what truly adds value to our life.<br> People these days, forget that they are human and they need to live their life fully without any regrets.<br> But instead, they are running and working to make their future better by sacrificing their present.<br> Physical spaces, digital habits, and even our schedules all these things are need to be managed to lead a perfect lifestyle with keeping the process to make future perfect in track.<br> And by embracing minimalism, we can reduce stress, increase focus, and improve your overall well-being.   </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 My Blog</p>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle("dark-theme");
+    }
+  </script>
+</body>
+</html>
