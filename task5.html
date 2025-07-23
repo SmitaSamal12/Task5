@@ -8,8 +8,8 @@
     body {
       margin: 0;
       font-family: sans-serif;
-      background: #b8ebe3;
-      color: #333;
+      background: #bfd585;
+      color: #000000;
     }
     header {
       background: #222;
@@ -67,6 +67,25 @@
       background: #121212;
       color: #eee;
     }
+    .comments {
+  margin-top: 1em;
+}
+.comment-list {
+  list-style: none;
+  padding: 0;
+}
+.comment-list li {
+  background: #fff;
+  margin-bottom: 0.5em;
+  padding: 0.5em;
+  border-radius: 6px;
+}
+textarea {
+  width: 50%;
+  resize: none;
+  border-radius: 6px;
+  padding: 0.5em;
+}
   </style>
 </head>
 <body>
@@ -88,12 +107,25 @@
       <p>Nature, in all its splendor, holds an undeniable magic.From the vibrant colors of blooming flowers to the majestic presence of a lion,<br> the natural world offers a constant source of wonder and awe. Animals, with their diverse behaviors and adaptations, showcase the wonders of evolution,<br> while the interconnectedness of ecosystems reveals the delicate balance of life.<br> Observing nature and its creatures allows us to appreciate the profound magic and interconnectedness that sustains our planet. </p>
       <button onclick="toggleTheme()">Toggle Theme</button>
     </section>
-
+<div class="comments">
+  <h3>Comments</h3>
+  <ul class="comment-list"></ul>
+  <textarea id="commentInput" rows="3" placeholder="Write a comment..."></textarea>
+  <br />
+  <button onclick="addComment()">Post Comment</button>
+</div>
     <section class="post">
       <h2>Minimal Living in a Maximum World</h2>
       <img src="C:\Users\prade\OneDrive\Pictures\life.png" loading="lazy" alt="Post Image" />
       <p>"Minimal Living in a Maximum World" is about intentionally simplifying our life by reducing clutter, distractions, and consumption, focusing on what truly adds value to our life.<br> People these days, forget that they are human and they need to live their life fully without any regrets.<br> But instead, they are running and working to make their future better by sacrificing their present.<br> Physical spaces, digital habits, and even our schedules all these things are need to be managed to lead a perfect lifestyle with keeping the process to make future perfect in track.<br> And by embracing minimalism, we can reduce stress, increase focus, and improve your overall well-being.   </p>
     </section>
+    <div class="comments">
+  <h3>Comments</h3>
+  <ul class="comment-list"></ul>
+  <textarea id="commentInput" rows="3" placeholder="Write a comment..."></textarea>
+  <br />
+  <button onclick="addComment()">Post Comment</button>
+</div>
   </main>
 
   <footer>
@@ -105,5 +137,20 @@
       document.body.classList.toggle("dark-theme");
     }
   </script>
+  <script>
+  function addComment() {
+    const input = document.getElementById("commentInput");
+    const commentText = input.value.trim();
+    if (commentText) {
+      const commentList = document.querySelector(".comment-list");
+      const newComment = document.createElement("li");
+      newComment.textContent = commentText;
+      commentList.appendChild(newComment);
+      input.value = "";
+    } else {
+      alert("Please enter a comment.");
+    }
+  }
+</script>
 </body>
 </html>
